@@ -13,9 +13,15 @@ public class path : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if (isTouched)
-        //{
-        //    isTouched = false;
-        //}
+        if (isTouched)
+        {
+            Invoke("UpdateItems", 3f);
+            isTouched = false;
+        }
 	}
+
+    void UpdateItems()
+    {
+        transform.position += new Vector3(6, 0, 0);
+    }
 }

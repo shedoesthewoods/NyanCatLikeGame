@@ -33,9 +33,8 @@ public class catto : MonoBehaviour {
     {
         if (touch.gameObject.tag.Equals("Tetik"))
         {
-            //touch.gameObject.transform.GetComponent<path>().isTouched = true;
-            //point++;
-            touch.gameObject.transform.parent.root.gameObject.GetComponent<path>().isTouched = true;
+            speed += 1;
+            touch.gameObject.transform.gameObject.GetComponent<path>().isTouched = true;
         }
     }
 
