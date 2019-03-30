@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Engel
+  - Tetik
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - oyuncu
+  - engel
+  - arka
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: arka
+    uniqueID: 346240705
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: oyuncu
+    uniqueID: 3303092495
+    locked: 0
+  - name: engel
+    uniqueID: 3732859469
+    locked: 0
