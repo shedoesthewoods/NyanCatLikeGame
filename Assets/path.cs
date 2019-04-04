@@ -15,6 +15,7 @@ public class path : MonoBehaviour {
 	void Update () {
         if (isTouched)
         {
+            //time değişkeni hıza göre değişkenlik göstermeli
             Invoke("UpdateItems", 3f);
             isTouched = false;
         }
@@ -22,6 +23,6 @@ public class path : MonoBehaviour {
 
     void UpdateItems()
     {
-        transform.position += new Vector3(8, 0, 0);
+        transform.position += new Vector3(24, 0, 0);
     }
 }
