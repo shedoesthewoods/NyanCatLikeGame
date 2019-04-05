@@ -23,6 +23,6 @@ public class path : MonoBehaviour {
 
     void UpdateItems()
     {
-        transform.position += new Vector3(24, 0, 0);
+        transform.position += new Vector3(30, 0, 0);
     }
 }

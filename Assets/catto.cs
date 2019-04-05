@@ -34,6 +34,7 @@ public class catto : MonoBehaviour {
         if (touch.gameObject.tag.Equals("Tetik"))
         {
             speed += 0.5f;
+            directionPower += 0.3f;
             touch.gameObject.GetComponentInParent<path>().isTouched = true;
         }
     }
