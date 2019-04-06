@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class catto : MonoBehaviour {
     public float speed;
@@ -34,7 +32,7 @@ public class catto : MonoBehaviour {
         if (touch.gameObject.tag.Equals("Tetik"))
         {
             speed += 0.5f;
-            directionPower += 0.3f;
+            directionPower += 1f;
             touch.gameObject.GetComponentInParent<path>().isTouched = true;
         }
     }
@@ -50,5 +48,10 @@ public class catto : MonoBehaviour {
     public void TheEnd()
     {
         Time.timeScale = 0;
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 }

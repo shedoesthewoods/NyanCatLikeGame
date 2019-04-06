@@ -16,6 +16,8 @@ public class path : MonoBehaviour {
         if (isTouched)
         {
             //time değişkeni hıza göre değişkenlik göstermeli
+            //float sp = GetComponentInParent<Rigidbody2D>().gameObject.GetComponent<catto>().GetSpeed;
+            //float sp = items.GetComponentInParent<Rigidbody2D>().gameObject.GetComponent<catto>().GetSpeed;
             Invoke("UpdateItems", 3f);
             isTouched = false;
         }
