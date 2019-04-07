@@ -1,24 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class path : MonoBehaviour {
     public bool isTouched;
     public GameObject items;
+    private float countSpeed;
+    private float engelHizi;
 
 	// Use this for initialization
 	void Start () {
-        isTouched = false;
-	}
+        isTouched = false; countSpeed = 0;
+        engelHizi = 3.5f;
+}
 	
 	// Update is called once per frame
 	void Update () {
         if (isTouched)
         {
-            //time değişkeni hıza göre değişkenlik göstermeli
-            //float sp = GetComponentInParent<Rigidbody2D>().gameObject.GetComponent<catto>().GetSpeed;
-            //float sp = items.GetComponentInParent<Rigidbody2D>().gameObject.GetComponent<catto>().GetSpeed;
-            Invoke("UpdateItems", 3f);
+            engelHizi -= (engelHizi == 0 ? 0.1f : 0.5f);
+            countSpeed += 0.5f;
+            Invoke("UpdateItems", engelHizi * countSpeed);
             isTouched = false;
         }
 	}

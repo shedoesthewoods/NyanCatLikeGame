@@ -32,8 +32,9 @@ public class catto : MonoBehaviour {
         if (touch.gameObject.tag.Equals("Tetik"))
         {
             speed += 0.5f;
-            directionPower += 1f;
+            directionPower += 1.5f;
             touch.gameObject.GetComponentInParent<path>().isTouched = true;
+            point++;
         }
     }
 
@@ -48,10 +49,5 @@ public class catto : MonoBehaviour {
     public void TheEnd()
     {
         Time.timeScale = 0;
-    }
-
-    public float GetSpeed()
-    {
-        return speed;
     }
 }
