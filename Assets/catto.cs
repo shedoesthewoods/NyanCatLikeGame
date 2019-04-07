@@ -1,24 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class catto : MonoBehaviour {
     public float speed;
     public float directionPower;
     public int point;
-
+    public GameObject canvas;
+    public Text score;
+    
 	// Use this for initialization
 	void Start () {
+        canvas.SetActive(false);
         Time.timeScale = 1;
         point = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.position += Vector3.right * speed * Time.deltaTime;
         transform.Translate(Vector3.right * speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            //transform.position += Vector3.up * Time.deltaTime * speed;
             GetComponent<Rigidbody2D>().AddForce(Vector3.up * directionPower);
         }
         else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -49,5 +51,7 @@ public class catto : MonoBehaviour {
     public void TheEnd()
     {
         Time.timeScale = 0;
+        canvas.SetActive(true);
+        score.text = point.ToString();
     }
 }

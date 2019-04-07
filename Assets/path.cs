@@ -21,7 +21,7 @@ public class path : MonoBehaviour
         {
             engelHizi -= (engelHizi == 0 ? 0.1f : 0.5f);
             countSpeed += 0.5f;
-            Invoke("UpdateItems", engelHizi * countSpeed);
+            Invoke("UpdateItems", engelHizi);
             isTouched = false;
         }
     }
